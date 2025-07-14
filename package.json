@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "vite build",
+    "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,css,html}\"",
-    "lint": "eslint"
+    "lint": "eslint",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
@@ -14,6 +18,10 @@
     "globals": "^15.9.0",
     "prettier": "^3.6.2",
     "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "keywords": [],
   "author": "Anik Mohammad <anik7303@gmail.com>",
