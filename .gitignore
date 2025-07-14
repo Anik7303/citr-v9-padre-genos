@@ -1,0 +1,18 @@
+# node modules
+node_modules/
+
+# output directory
+dist/
+
+# environment variables
+.env*
+!.env.example
+
+# coverage
+coverage/
+
+# vscode settings
+.vscode/
+
+# misc
+.DS_Store
