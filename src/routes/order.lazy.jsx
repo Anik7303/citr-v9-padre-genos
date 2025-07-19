@@ -3,13 +3,9 @@ import { useContext, useEffect, useState } from "react";
 import Cart from "../Cart";
 import { CartContext } from "../contexts";
 import Pizza from "../Pizza";
+import { convertCurrency } from "../utility";
 
 export const Route = createLazyFileRoute("/order")({ component: Order });
-
-const intl = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-});
 
 function Order() {
   const [pizzas, setPizzas] = useState([]);
@@ -22,7 +18,7 @@ function Order() {
 
   if (!loading) {
     selectedPizza = pizzas.find((pizza) => pizza.id === pizzaType);
-    price = intl.format(selectedPizza.sizes[pizzaSize]);
+    price = convertCurrency(selectedPizza.sizes[pizzaSize]);
   }
 
   async function fetchPizzas() {
