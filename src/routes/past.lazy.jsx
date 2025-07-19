@@ -3,10 +3,22 @@ import { createLazyFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import getPastOrder from "../api/getPastOrder";
 import getPastOrders from "../api/getPastOrders";
+import ErrorBoundary from "../ErrorBoundary";
 import Modal from "../Modal";
 import { convertCurrency } from "../utility";
 
-export const Route = createLazyFileRoute("/past")({ component: PastOrders });
+// export const Route = createLazyFileRoute("/past")({ component: PastOrders });
+export const Route = createLazyFileRoute("/past")({
+  component: PastOrdersWithErrorBoundary,
+});
+
+function PastOrdersWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <PastOrders {...props} />
+    </ErrorBoundary>
+  );
+}
 
 function PastOrders() {
   const [page, setPage] = useState(1);
