@@ -5,7 +5,6 @@
 - Course Project: Padre Geno's Pizza
 - Course: Complete Intro to React, v9
 - Course Teacher: [Brian Holt][btholt]
-- Main Repository: [https://github.com/btholt/citr-v9-project][main-project-repo]
 
 ## Used Packages
 
@@ -49,7 +48,12 @@ npm run test
 npm run test:coverage
 ```
 
+## Useful Links
+- Main Repository: [https://github.com/btholt/citr-v9-project][main-project-repo]
+- API: [https://github.com:Anik7303/citr-v9-api][citr-api]
+
 [frontend_masters]: https://frontendmasters.com
 [citr]: https://frontendmasters.com/courses/complete-react-v9/
 [btholt]: https://github.com/btholt
 [main-project-repo]: https://github.com/btholt/citr-v9-project.git
+[citr-api]: https://github.com/Anik7303/citr-v9-api
